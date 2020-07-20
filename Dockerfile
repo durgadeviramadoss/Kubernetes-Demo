@@ -1,5 +1,5 @@
 FROM ubuntu
-RUN apt-get update && apt-get install nodejs -y && apt-get install nodejs-legacy -y && apt-get install npm -y
+RUN apt-get update && apt-get install nodejs -y && apt-get install npm -y
 RUN echo "Git Clone Repository"
 COPY . /tmp/
 WORKDIR /tmp/node-js-sample/
