@@ -28,7 +28,7 @@ pipeline {
             steps {
                 //sh 'rm -rf Kubernetes-Demo'
                 //sh 'git clone https://github.com/HM-demo/Kubernetes-Demo'
-                cleanWs()
+                deleteDir()
                 checkout scm
             }
         }
