@@ -55,7 +55,7 @@ pipeline {
                 }     
             }
         }
-        
+    
         stage("Rollingupdate Deployment") {
              when {
                 // Only say hello if a "greeting" is requested
