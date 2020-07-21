@@ -1,8 +1,11 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs
 spec:
+  selector:
+    matchLabels:
+      app: nodeapp
   replicas: 4
   strategy:
     type: RollingUpdate
@@ -17,7 +20,7 @@ spec:
     spec:
       containers:
         - name: front-end
-          image: durgaoct1989/nodejs-app-demo
+          image: durgaoct1989/nodejs-app-demo:7
           ports:
             - containerPort: 5000
           readinessProbe:
