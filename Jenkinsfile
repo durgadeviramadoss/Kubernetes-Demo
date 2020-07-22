@@ -63,6 +63,9 @@ pipeline {
              withSonarQubeEnv('sonar') {
                 sh "sudo ${scannerHome}/bin/sonar-scanner"
             }
+                timeout(time: 5, unit: 'MINUTES') {
+            waitForQualityGate abortPipeline: true
+        }
         }
     }
         stage("Rollingupdate Deployment") {
