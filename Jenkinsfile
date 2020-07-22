@@ -56,7 +56,7 @@ pipeline {
                 }     
             }
         }
-        stage('Sonarqube') {
+       /* stage('Sonarqube') {
             environment {
                 scannerHome = tool 'sonarscanner'
                 }
@@ -68,7 +68,7 @@ pipeline {
             waitForQualityGate abortPipeline: true
         }
         }
-    }
+    }*/
         stage("Rollingupdate Deployment") {
              when {
                 // Only say hello if a "greeting" is requested
