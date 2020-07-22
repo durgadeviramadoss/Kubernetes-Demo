@@ -26,10 +26,10 @@ pipeline {
     stages {
         stage("build") {
             steps {
-               // sh 'rm -rf Kubernetes-Demo'
+               sh 'sudo rm -rf Kubernetes-Demo'
                 //sh 'git clone https://github.com/HM-demo/Kubernetes-Demo'
                 //deleteDir()
-                cleanWS()
+                //cleanWS()
                 checkout scm
             }
         }
