@@ -26,9 +26,9 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                //sh 'rm -rf Kubernetes-Demo'
+                sh 'rm -rf Kubernetes-Demo'
                 //sh 'git clone https://github.com/HM-demo/Kubernetes-Demo'
-                deleteDir()
+                //deleteDir()
                 checkout scm
             }
         }
